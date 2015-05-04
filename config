@@ -57,7 +57,7 @@ for_window [window_role="pop-up"] floating enable,move absolute cente
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+#bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -161,6 +161,9 @@ mode "resize" {
 
 bindsym $mod+Shift+r mode "resize"
 
+# LOCK
+bindsym $mod+l exec --no-startup-id i3lock-wrapper
+
 # VOLUME ADJUSTMENT
 bindsym XF86AudioRaiseVolume exec amixer set Master 5.0%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5.0%-
@@ -198,5 +201,6 @@ bar {
 # AUTOSTART
 exec  --no-startup-id xgamma -gamma 0.8
 exec  --no-startup-id nitrogen --restore
-exec --no-startup-id mpd .mpd/mpd.conf
-# exec  --no-startup-id compton --config /home/frank/.config/compton/compton.conf
+exec --no-startup-id mpd .mpd/mpd.con f
+exec  --no-startup-id compton --config /home/frank/.config/compton/compton.conf
+exec --no-startup-id xautolock -time 15 -locker i3lock-wrapper 

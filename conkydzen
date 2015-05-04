@@ -4,7 +4,7 @@ out_to_x no
 update_interval 1
 
 TEXT
-${if_mpd_playing}^fg(\#0DCFC5)^i(/home/frank/.icons/dzen2/play.xbm)${if_empty ${exec mpc | grep -i pause | cut -c 2-6}} ^fg(\#989584)${mpd_artist} - ${mpd_title} ${else} ^fg(\#989584)Pause${endif} \
+${if_mpd_playing}^fg(\#0DCFC5)^i(/home/frank/.icons/dzen2/note.xbm)${if_empty ${exec mpc | grep -i pause | cut -c 2-6}} ^fg(\#989584)${mpd_artist} - ${mpd_title} ${else} ^fg(\#989584)Pause${endif} \
 ^fg(\#0DCFC5)^i(/home/frank/.icons/dzen2/spkr_01.xbm)${endif}^fg(\#989584)${exec /home/frank/.i3/vol.sh} \
 ^fg(\#0DCFC5)^i(/home/frank/.icons/dzen2/mem.xbm) ^fg(\#989584)${mem}/${memmax} \
 ^fg(\#0DCFC5)^i(/home/frank/.icons/dzen2/cpu.xbm) ^fg(\#989584)${cpu} % \
